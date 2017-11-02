@@ -1,5 +1,13 @@
 # Capture the flag tool
 
+### TODO
+
+- [x] Base 64 encode
+- [x] Base 64 decode
+- [x] Base 32 encode
+- [x] Base 32 decode
+- [ ] Md5
+
 ## Base64encode and Base64decode
 
 ```shell
