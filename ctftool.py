@@ -14,20 +14,20 @@ args = parser.parse_args()
  
 
 if args.base64encode:
-    encode = base64.b64encode(args.base64encode)
-    print(encode)
+    encode = base64.b64encode(bytes(args.base64encode, encoding='utf-8'))
+    print(encode.decode("utf-8"))
 
 if args.base64decode:
     decode = base64.b64decode(args.base64decode)
-    print(decode)
+    print(decode.decode("utf-8"))
 
 if args.base32encode:
-    encode = base64.b32encode(args.base32encode)
-    print(encode)
+    encode = base64.b32encode(bytes(args.base32encode, encoding='utf-8'))
+    print(encode.decode("utf-8"))
 
 if args.base32decode:
     decode = base64.b32decode(args.base32decode)
-    print(str(decode))
+    print(decode.decode("utf-8"))
 
 if args.base16encode:
     encode = base64.b16encode(bytes(args.base16encode, encoding='utf-8'))
