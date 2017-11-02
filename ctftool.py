@@ -8,6 +8,8 @@ parser.add_argument("-64e", "--base64encode", help="encode base64 string")
 parser.add_argument("-64d", "--base64decode", help="decode base64 string")
 parser.add_argument("-32e", "--base32encode", help="encode base32 string")
 parser.add_argument("-32d", "--base32decode", help="decode base32 string")
+parser.add_argument("-16e", "--base16encode", help="encode base16 string")
+parser.add_argument("-16d", "--base16decode", help="decode base16 string")
 args = parser.parse_args()
  
 
@@ -25,4 +27,12 @@ if args.base32encode:
 
 if args.base32decode:
     decode = base64.b32decode(args.base32decode)
-    print(decode)
+    print(str(decode))
+
+if args.base16encode:
+    encode = base64.b16encode(bytes(args.base16encode, encoding='utf-8'))
+    print(encode.decode("utf-8"))
+
+if args.base16decode:
+    decode = base64.b16decode(args.base16decode)
+    print(decode.decode("utf-8"))
