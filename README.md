@@ -27,3 +27,10 @@ demo
 ```
 
 
+## Base16encode and Base16decode
+```shell
+$ python ctftool.py -16e demo
+64656D6F
+$ python ctftool.py -16d 64656D6F
+demo
+```
