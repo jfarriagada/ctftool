@@ -14,7 +14,7 @@ args = parser.parse_args()
  
 
 if args.base64encode:
-    encode = base64.b64encode(bytes(args.base64encode, encoding='utf-8'))
+    encode = base64.b64encode(bytes(args.base64encode).encode('utf-8'))
     print(encode.decode("utf-8"))
 
 if args.base64decode:
@@ -22,7 +22,7 @@ if args.base64decode:
     print(decode.decode("utf-8"))
 
 if args.base32encode:
-    encode = base64.b32encode(bytes(args.base32encode, encoding='utf-8'))
+    encode = base64.b32encode(bytes(args.base32encode).encode('utf-8'))
     print(encode.decode("utf-8"))
 
 if args.base32decode:
@@ -30,7 +30,7 @@ if args.base32decode:
     print(decode.decode("utf-8"))
 
 if args.base16encode:
-    encode = base64.b16encode(bytes(args.base16encode, encoding='utf-8'))
+    encode = base64.b16encode(bytes(args.base16encode).encode('utf-8'))
     print(encode.decode("utf-8"))
 
 if args.base16decode:
