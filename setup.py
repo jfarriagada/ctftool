@@ -9,8 +9,8 @@ setup(
     long_description='',
     license='BSD',
     keywords='ctc capture the flag tool',
-    url='',
-    packages=find_packages(),
+    url='https://github.com/jfarriagada/ctftool',
+    packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     package_data={
         'ctf-tool': ['*.txt']
     },
@@ -18,7 +18,7 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: BSD License',
-        'Programming Language :: Python :: 3.x',
+        'Programming Language :: Python :: 3.2',
         'Topic :: Utilities'
     ]
 )
